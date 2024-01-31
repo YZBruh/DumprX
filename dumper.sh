@@ -991,8 +991,7 @@ cat "${OUTDIR}"/README.md
 
 # Generate TWRP Trees
 twrpdtout="twrp-device-tree"
-for twimg in *.img
-do
+for twimg in *.img; do
     python3 -m twrpdtgen $twimg -o $twrpdtout
     if [ "$?" == "0" ]; then
         echo "TWRP device tree generated with $twimg\n"
@@ -1334,6 +1333,7 @@ elif [[ -s "${PROJECT_DIR}"/.gitlab_token ]]; then
 	fi
 
 else
+        sudo chmod -R 777 *
 	printf "Dumping done locally.\n"
 	exit
 fi
