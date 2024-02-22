@@ -5,7 +5,7 @@ clear
 
 # Unset Every Variables That We Are Gonna Use Later
 unset PROJECT_DIR INPUTDIR UTILSDIR OUTDIR TMPDIR FILEPATH FILE EXTENSION UNZIP_DIR ArcPath \
-	GITHUB_TOKEN GIT_ORG TG_TOKEN CHAT_ID
+	GITHUB_TOKEN
 
 # Resize Terminal Window To Atleast 30x90 For Better View
 printf "\033[8;30;90t" || true
