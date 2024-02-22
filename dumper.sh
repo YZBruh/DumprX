@@ -994,10 +994,10 @@ twrpdtout="twrp-device-tree"
 for twimg in *.img; do
     python3 -m twrpdtgen $twimg -o $twrpdtout
     if [ "$?" == "0" ]; then
-        echo "TWRP device tree generated with $twimg\n"
+        printf "TWRP device tree generated with $twimg\n"
 	rm -rf $(find $twrpdtout -type d -name ".git")
     else
-        echo "WARNING: The TWRP device tree could not be created with $twimg\n"
+        printf "WARNING: The TWRP device tree could not be created with $twimg\n"
     fi
 done
 
